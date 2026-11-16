@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subfloor Screw & Plywood Calculator — No-Squeak Framing — Accurate Material Estimator</title>
+  <meta name="description" content="Calculate exact 4x8 OSB subfloor sheets, collated no-squeak floor screws, and polyurethane adhesive tubes according to APA code spacing.">
+  <link rel="canonical" href="https://sebiglesias.com.ar/subfloor-screw-calculator/">
+  <meta name="theme-color" content="#f59e0b">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Subfloor Screw & Plywood Calculator — No-Squeak Framing">
+  <meta property="og:description" content="Calculate exact 4x8 OSB subfloor sheets, collated no-squeak floor screws, and polyurethane adhesive tubes according to APA code spacing.">
+  <meta property="og:url" content="https://sebiglesias.com.ar/subfloor-screw-calculator/">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-2BNDBQP0W7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-2BNDBQP0W7');
+  </script>
+
+  <!-- Google AdSense -->
+  <meta name="google-adsense-account" content="ca-pub-3381238987477190">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3381238987477190" crossorigin="anonymous"></script>
+
+  <!-- JSON-LD Schema -->
+  <script type="application/ld+json">
+  [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Subfloor Screw & Plywood Calculator \u2014 No-Squeak Framing",
+    "url": "https://sebiglesias.com.ar/subfloor-screw-calculator/",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "description": "Calculate exact 4x8 OSB subfloor sheets, collated no-squeak floor screws, and polyurethane adhesive tubes according to APA code spacing.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What causes subfloor squeaks and how do screws prevent them?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Squeaks occur when smooth-shank nails loosen slightly over time as joists shrink and expand with seasonal humidity. When walked on, the plywood rubs up and down along the loose nail shank. High-tensile coarse-threaded subfloor screws combined with polyurethane subfloor adhesive create a permanent monolithic bond that never loosens."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why is an 1/8-inch expansion gap required between subfloor sheets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Engineered wood panels (OSB and plywood) expand slightly when absorbing atmospheric humidity. If sheets are butted tightly together with no gap, the edges buckle upward at the seams, creating noticeable ridges under carpet, tile, or hardwood flooring."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the APA standard screw spacing for subfloors?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "APA (The Engineered Wood Association) specifies screws spaced 6 inches apart along all panel supported edges, and 12 inches apart across intermediate interior joists (the field)."
+        }
+      }
+    ]
+  }
+]
+  </script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="badge">🔨 APA The Engineered Wood Association</div>
+      <h1>Subfloor Plywood & Screw Fastener Calculator</h1>
+      <p class="subtitle">Calculate 4x8 OSB/plywood sheets, collated subfloor screws (12" field / 6" edge), and adhesive tubes.</p>
+    </header>
+
+    <!-- AdSense Top Banner -->
+    <div style="text-align:center; margin: 16px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <main class="calc-grid">
+      <!-- Inputs Card -->
+      <form class="card" id="subfloor-screw-calculator-form" onsubmit="event.preventDefault();">
+        <h2>📐 Room Floor Dimensions & Joist Spacing</h2>
+        
+        <div class="input-row">
+          <div class="form-group">
+            <label for="floorLen">Room Length <span class="hint">Longest wall</span></label>
+            <div class="input-wrap">
+              <input type="number" id="floorLen" step="1" min="4" value="24" required>
+              <span class="input-suffix">ft</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="floorWid">Room Width <span class="hint">Across joist spans</span></label>
+            <div class="input-wrap">
+              <input type="number" id="floorWid" step="1" min="4" value="16" required>
+              <span class="input-suffix">ft</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-row">
+          <div class="form-group">
+            <label for="joistSpacing">Joist Spacing (On-Center)</label>
+            <select id="joistSpacing">
+              <option value="16" selected>16" O.C. (Standard Residential 5 Joists/Sheet)</option>
+              <option value="19.2">19.2" O.C. (Engineered I-Joist 4 Joists/Sheet)</option>
+              <option value="24">24" O.C. (Heavy Framing 3 Joists/Sheet)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="panelThickness">Sheathing Thickness</label>
+            <select id="panelThickness">
+              <option value="0.75" selected>3/4-Inch Tongue & Groove (Gold Standard)</option>
+              <option value="0.625">5/8-Inch (Light Residential)</option>
+              <option value="1.125">1-1/8 Inch (Heavy Timber / Radiant Heat)</option>
+            </select>
+          </div>
+        </div>
+
+      </form>
+
+      <!-- Results Card -->
+      <div class="card">
+        <h2>🎯 Subfloor Fastening Requirements</h2>
+        
+        <div class="result-hero">
+          <div class="result-label">Total Subfloor Screws Required</div>
+          <div class="result-number" id="totalScrews">720</div>
+          <div class="result-label" style="color:#ffffff;">Subfloor Screws (6" Edge / 12" Field)</div>
+          <div style="font-size:0.95rem; color:#fde68a; margin-top:6px;" id="screwBoxes">≈ 1 Box of 1,000 Collated Screws</div>
+        </div>
+
+        <div class="sub-hero-grid">
+          <div class="sub-hero-col">
+            <div class="sub-hero-label">4x8 T&G OSB Sheets</div>
+            <div class="sub-hero-val" id="sheetCount">13 Sheets</div>
+            <div class="sub-hero-sub">+8% Cut Waste Buffer</div>
+          </div>
+          <div class="sub-hero-col">
+            <div class="sub-hero-label">Subfloor Adhesive (28oz)</div>
+            <div class="sub-hero-val" id="glueTubes">5 Tubes</div>
+            <div class="sub-hero-sub">PL Premium Polyurethane</div>
+          </div>
+        </div>
+
+        <div class="specs-grid">
+          <div class="spec-item">
+            <div class="spec-desc">Total Floor Area</div>
+            <div class="spec-val" id="floorArea">384 sq ft</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Screws Per Sheet</div>
+            <div class="spec-val" id="screwsPerSheet">≈ 55 Screws (16" OC)</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Recommended Screw Length</div>
+            <div class="spec-val" id="screwLength">2-Inch #8 or #9</div>
+          </div>
+          <div class="spec-item">
+            <div class="spec-desc">Expansion Gap at Seams</div>
+            <div class="spec-val">1/8" (Dime Thickness)</div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <!-- Amazon Supplies Box -->
+    <section class="supplies-card">
+      <h3>🛠️ Recommended Tools, Hardware & Building Supplies</h3>
+      <div class="supplies-grid">
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Simpson Strong-Tie Quik Drive PRO200SG2 Subfloor Auto-Feed System</div>
+            <div class="supply-desc">Stand-up collated screw gun drives subfloor screws in seconds without worker back fatigue.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=simpson+quik+drive+subfloor+screw+gun&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Simpson Strong-Tie 2" Subfloor Collated Screws (Box of 1000)</div>
+            <div class="supply-desc">Ribbed flat-head screws countersink cleanly into OSB and eliminate squeaks between plywood and joists.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=simpson+subfloor+collated+screws+2+inch&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Loctite PL Premium 3X Polyurethane Subfloor Adhesive (28 oz)</div>
+            <div class="supply-desc">Bonds wet, frozen, and treated lumber, bridging gaps up to 3/8 inch to permanently stop floor squeaks.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=loctite+pl+premium+subfloor+adhesive+28oz&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+        <div class="supply-item">
+          <div>
+            <div class="supply-title">Newborn Pro Heavy-Duty 28-oz Caulking Gun (26:1 Thrust Ratio)</div>
+            <div class="supply-desc">Commercial-grade smooth hex rod caulking gun easily dispenses thick polyurethane subfloor glue.</div>
+          </div>
+          <a href="https://www.amazon.com/s?k=heavy+duty+caulking+gun+28+oz&tag=sebiglesias-20" target="_blank" rel="nofollow noopener" class="btn-amazon">Check on Amazon →</a>
+        </div>
+      </div>
+      <p style="font-size:0.75rem; color:#94a3b8; margin-top:14px; margin-bottom:0; text-align:center;">
+        ⚖️ <em>Affiliate Notice: As an Amazon Associate, this site earns from qualifying purchases at no additional cost to you. We strictly link to trade-grade construction tools, hardware, and safety materials.</em>
+      </p>
+    </section>
+
+    <!-- FAQ Section for SEO -->
+    <section class="faq-section">
+      <h2 style="font-size:1.35rem; color:#ffffff; margin-bottom:16px;">Frequently Asked Questions</h2>
+      <div class="faq-item">
+        <div class="faq-q">What causes subfloor squeaks and how do screws prevent them?</div>
+        <div class="faq-a">Squeaks occur when smooth-shank nails loosen slightly over time as joists shrink and expand with seasonal humidity. When walked on, the plywood rubs up and down along the loose nail shank. High-tensile coarse-threaded subfloor screws combined with polyurethane subfloor adhesive create a permanent monolithic bond that never loosens.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Why is an 1/8-inch expansion gap required between subfloor sheets?</div>
+        <div class="faq-a">Engineered wood panels (OSB and plywood) expand slightly when absorbing atmospheric humidity. If sheets are butted tightly together with no gap, the edges buckle upward at the seams, creating noticeable ridges under carpet, tile, or hardwood flooring.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">What is the APA standard screw spacing for subfloors?</div>
+        <div class="faq-a">APA (The Engineered Wood Association) specifies screws spaced 6 inches apart along all panel supported edges, and 12 inches apart across intermediate interior joists (the field).</div>
+      </div>
+    </section>
+
+    <!-- Bottom AdSense Banner -->
+    <div style="text-align:center; margin: 32px 0;">
+      <ins class="adsbygoogle"
+           style="display:block"
+           data-ad-client="ca-pub-3381238987477190"
+           data-ad-slot="auto"
+           data-ad-format="auto"
+           data-full-width-responsive="true"></ins>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+
+    <footer>
+      <p>© 2026 <a href="https://sebiglesias.com.ar/">sebiglesias.com.ar</a> · Subfloor Screw & Plywood Calculator — No-Squeak Framing. Educational and trade reference tool.</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

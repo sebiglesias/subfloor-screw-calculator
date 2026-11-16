@@ -1,0 +1,15 @@
+{
+  "name": "Subfloor Screw & Plywood Calculator \u2014 No-Squeak Framing",
+  "short_name": "Subfloor Calc",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#120e06",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
